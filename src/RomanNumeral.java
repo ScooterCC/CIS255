@@ -1,16 +1,21 @@
-
+// Scanner utility.
 import java.util.Scanner;
 
 public class RomanNumeral {
 
     public static void main(String[] args) {
+
+        // Number variable.
         int num;
 
-        Scanner inputNum = new Scanner(System.in);
+        // New scanner for user input.
+        Scanner input = new Scanner(System.in);
 
-        System.out.println("Enter a number in the range of 1 - 10: ");
-        num = inputNum.nextInt();
+        // Prompt user for number.
+        System.out.print("Enter a number in the range of 1 - 10: ");
+        num = input.nextInt(); // Assign num variable to user input.
 
+        // Display roman numeral equivalent to user number input.
         switch (num) {
             case 1 -> System.out.println("I");
             case 2 -> System.out.println("II");
@@ -22,8 +27,9 @@ public class RomanNumeral {
             case 8 -> System.out.println("VIII");
             case 9 -> System.out.println("IX");
             case 10 -> System.out.println("X");
-            default -> System.out.println("Invalid number");
-        }
 
+            // Display error if number is not 1 - 10
+            default -> System.out.println("Invalid number!");
+        }
     }
 }
