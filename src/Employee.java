@@ -1,18 +1,21 @@
 public class Employee {
 
-    private String name;
+    private String name, department, position;
     private int idNumber;
-    private String department;
-    private String position;
-
-    public Employee(){
-    }
 
     public Employee(String name,int idNumber, String department, String position){
         this.name = name;
         this.idNumber = idNumber;
         this.department = department;
         this.position = position;
+    }
+
+    public Employee( String employeeName, int employeeIdNumber ) {
+        name = employeeName;
+        idNumber = employeeIdNumber;
+    }
+
+    public Employee(){
     }
 
     public String getName() {
