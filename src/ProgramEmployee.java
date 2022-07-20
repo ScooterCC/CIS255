@@ -1,26 +1,27 @@
 public class ProgramEmployee {
 
-        public static void main(String[] args){
+        public static void main(String[] args) {
+            // New Employee information.
+            Employee employee1 = new Employee("Susan Meyers", 47899, "Accounting", "Vice President");
+            Employee employee2 = new Employee("Mark Jones", 39119);
+            Employee employee3 = new Employee();
 
-            Employee employee1 = new Employee("Frank", "Freddy", 1000);
-            printEmployee(employee1);
+            // New Employee information.
+            employee2.setDepartment("IT");
+            employee2.setPosition("Programmer");
 
-            Employee employee2 = new Employee("Jack", "Jackson", 768);
-            printEmployee(employee2);
+            // New Employee information.
+            employee3.setName("Joy Rogers");
+            employee3.setIdNumber(81774);
+            employee3.setDepartment("Manufacturing");
+            employee3.setPosition("Engineer");
 
-            System.out.println("\nAfter 10% raises:\n");
-            // set raises of 10%
-            employee1.setRaise(10);
-            printEmployee(employee1);
+            // Header displayed.
+            System.out.println("Name\t\t\tId Number\t\tDepartment\t\tPosition");
 
-            employee2.setRaise(10);
-            printEmployee(employee2);
-
+            // Employee information displayed.
+            System.out.println(employee1.getName()+"\t"+employee1.getIdNumber()+"\t\t\t"+employee1.getDepartment()+"\t\t"+employee1.getPosition());
+            System.out.println(employee2.getName()+"\t\t"+employee2.getIdNumber()+"\t\t\t"+employee2.getDepartment()+"\t\t\t\t"+employee2.getPosition());
+            System.out.println(employee3.getName()+"\t\t"+employee3.getIdNumber()+"\t\t\t"+employee3.getDepartment()+"\t"+employee3.getPosition());
         }
-        private static void printEmployee(Employee employee){
-            System.out.printf("%s %s: $%.2f per annum\n",
-                    employee.getFirstName(), employee.getLastName(),
-                    employee.getYearlySalary());
-        }
-
 }
